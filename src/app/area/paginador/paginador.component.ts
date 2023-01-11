@@ -22,6 +22,7 @@ export class PaginadorComponent {
   paginador: IPaginador = { 
     total: 0,
     encabezados: [ 'nombre', 'empleados', 'estatus', 'accion' ],
+    // encabezados: [ 'nombre', 'empleados', 'estatus', 'costos', 'accion' ],
     buscar: "",
     max: 10
   }

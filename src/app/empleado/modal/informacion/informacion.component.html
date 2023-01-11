@@ -76,7 +76,7 @@
             <div class="w-1/2">
                 <span class="text-sm text-purple-600">Salario(MXN)</span>
                 <p class="text-base font-semibold">
-                    {{ empleadoInformacion.salario }}
+                    {{ empleadoInformacion.salario  | currency: 'USD'}}
                 </p>
             </div>
 

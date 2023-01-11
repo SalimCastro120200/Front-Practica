@@ -114,7 +114,7 @@
 
   <mat-form-field appearance="fill" class="w-1/3 pl-1 mb-3">
     <mat-label>Salario (MXN)</mat-label>
-    <input type="tel" matInput formControlName="salario"/> 
+    <input type="number" matInput formControlName="salario"/> 
     <mat-error *ngIf="form.controls['salario'].hasError('required')"
       >El campo es obligatorio</mat-error
     >

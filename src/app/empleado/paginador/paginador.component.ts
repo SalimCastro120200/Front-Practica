@@ -6,9 +6,10 @@ import { GestionComponent } from '../../area/modal/gestion/gestion.component';
 import { IPaginador } from '../../_helpers/IPaginador';
 import { InformacionComponent } from '../modal/informacion/informacion.component';
 import { MatDialog } from '@angular/material/dialog';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-paginador',

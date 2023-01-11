@@ -45,8 +45,8 @@ export class RegistroComponent {
     cp: ['', [Validators.required, Validators.pattern(/^[0-9]{5}$/)]],
     colonia: ['', [Validators.required, Validators.minLength(3)]],
     tc: [false, [Validators.required]],
-    curp: ['',[Validators.required, Validators.minLength(18)]],
-    salario: [ '', [Validators.required, Validators.pattern(/^[0-9]\d*$/)]]
+    curp: ['',[Validators.required, Validators.pattern(/^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$/)]],
+    salario: [ 0, [Validators.required, Validators.pattern(/^[0-9]\d*$/)]]
   })
   constructor(
     private matIconRegistry: MatIconRegistry,
@@ -102,7 +102,7 @@ export class RegistroComponent {
             cp: resp.informacion.cp,
             colonia: resp.informacion.colonia,
             curp: resp.informacion.curp,
-            salario: resp.informacion.curp
+            salario: resp.informacion.salario
           })
 
         }, 100);
@@ -153,7 +153,7 @@ export class RegistroComponent {
       data.nombre as any, data.paterno as any, data.materno as any,
       data.sexo == 'true', this.datePipe.transform(data.fechaNacimiento, 'MM/dd/yyyy')!,
       data.calle as any, data.exterior as any, data.interior as any, data.cp as any, data.colonia as any,
-      data.telefono as any, data.correo as any, data.areas as any, data.curp as any, data.salario as any
+      data.telefono as any, data.correo as any, data.areas as any, data.curp as any, data.salario
     )
 
     if (this.uuid) {
@@ -163,7 +163,7 @@ export class RegistroComponent {
         data.nombre as any, data.paterno as any, data.materno as any,
         data.sexo == 'true', this.datePipe.transform(data.fechaNacimiento, 'MM/dd/yyyy')!,
         data.calle as any, data.exterior as any, data.interior as any, data.cp as any, data.colonia as any,
-        data.telefono as any, data.correo as any, data.areas as any, data.curp as any, data.salario as any
+        data.telefono as any, data.correo as any, data.areas as any, data.curp as any, + data.salario
       )
     }
 
