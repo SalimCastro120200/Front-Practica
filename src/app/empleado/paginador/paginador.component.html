@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="relative mat-elevation-z3">
+<div class="relative mat-elevation-z3 pb-8">
   <div class="absolute top-0 left-0 bottom-14 right-0 bg-black bg-opacity-20 z-10 flex items-center justify-center" 
     *ngIf="estaCargando || paginador.total == 0">
     <mat-spinner *ngIf="estaCargando"></mat-spinner>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="relative min-h-[200px]">
+  <div class="relative min-h-[10px]">
     <table mat-table [dataSource]="listaAreas" class="w-full" matSort matSortActive="nombre" matSortDisableClea
       matSortDirection="desc">
 

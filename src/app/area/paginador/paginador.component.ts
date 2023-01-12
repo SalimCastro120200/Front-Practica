@@ -17,12 +17,12 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./paginador.component.css']
 })
 export class PaginadorComponent {
-  
+  areaInformacion: any
   listaAreas: any[] = []
   paginador: IPaginador = { 
     total: 0,
-    encabezados: [ 'nombre', 'empleados', 'estatus', 'accion' ],
-    // encabezados: [ 'nombre', 'empleados', 'estatus', 'costos', 'accion' ],
+    // encabezados: [ 'nombre', 'empleados', 'estatus', 'accion' ],
+    encabezados: [ 'nombre', 'empleados', 'estatus', 'costos', 'accion' ],
     buscar: "",
     max: 10
   }

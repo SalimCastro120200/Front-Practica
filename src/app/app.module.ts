@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuModule } from './menu/menu.module';
 import { NgModule } from '@angular/core';
+import { FooterComponent } from './footer/footer/footer.component';
+import { FooterModule } from './footer/footer.module';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { NgModule } from '@angular/core';
     AppRoutingModule,
     BrowserAnimationsModule,
     MenuModule,
-    HttpClientModule
+    HttpClientModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
